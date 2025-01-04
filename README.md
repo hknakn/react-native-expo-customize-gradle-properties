@@ -1,50 +1,61 @@
-# Welcome to your Expo app 👋
+# React Native Expo Customize Gradle Properties
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+This repository demonstrates how to customize Gradle properties in an Expo project using config plugins. It shows how to enable AndroidX and Jetifier in your Expo project by modifying the Gradle properties.
 
-## Get started
+## Features
 
-1. Install dependencies
+- Custom Expo config plugin to modify Android Gradle configuration
+- Enable AndroidX support
+- Enable Jetifier
 
-   ```bash
-   npm install
-   ```
+## How It Works
 
-2. Start the app
+The repository contains a custom Expo config plugin:
 
-   ```bash
-    npx expo start
-   ```
+`withGradleProperties.js`: Modifies the Gradle properties to enable AndroidX and Jetifier support in your Expo project.
 
-In the output, you'll find options to open the app in a
+This plugin is integrated into the project through the `app.json` configuration.
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
+## Installation
 
 ```bash
-npm run reset-project
+# Clone the repository
+git clone https://github.com/yourusername/react-native-expo-customize-gradle-properties.git
+
+# Install dependencies
+cd react-native-expo-customize-gradle-properties
+npm install
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## Usage
 
-## Learn more
+The plugin is already configured in the project. To use this in your own project:
 
-To learn more about developing your project with Expo, look at the following resources:
+1. Create an `expo-plugins` directory in your project
+2. Copy the `withGradleProperties.js` file from this repository
+3. Update your `app.json` to include the plugin:
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+```json
+{
+  "expo": {
+    "plugins": [
+      "./expo-plugins/withGradleProperties"
+    ]
+  }
+}
+```
 
-## Join the community
+## Development
 
-Join our community of developers creating universal apps.
+```bash
+# Start the development server
+npx expo start
+```
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+## License
+
+MIT
+
+## Contributing
+
+Feel free to submit issues and pull requests.
