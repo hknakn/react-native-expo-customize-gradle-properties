@@ -20,7 +20,7 @@ This plugin is integrated into the project through the `app.json` configuration.
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/react-native-expo-customize-gradle-properties.git
+git clone https://github.com/hknakn/react-native-expo-customize-gradle-properties.git
 
 # Install dependencies
 cd react-native-expo-customize-gradle-properties
